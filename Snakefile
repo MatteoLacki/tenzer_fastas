@@ -73,6 +73,7 @@ rule get_yeast_swissprot:
         wget -O {output} "https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28%28taxonomy_id%3A4932%29%29+AND+%28reviewed%3Atrue%29"
         """
 
+
 rule get_hye:
     output:
         "fastas/hye.fasta"
@@ -82,6 +83,7 @@ rule get_hye:
         "fastas/ecoli.fasta",
     shell:
         "cat {input} > {output}"
+
 
 rule get_Hao_group_contaminants:
     output:
@@ -95,8 +97,6 @@ rule get_Hao_group_contaminants:
         cp Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics/**/*.fasta contaminants
         cp Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics/Universal\ protein\ contaminant\ FASTA/0602_Universal\ Contaminants.fasta {output}
         """
-
-
 
 
 rule append_contaminants:
