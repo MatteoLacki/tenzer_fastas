@@ -6,19 +6,19 @@ rule all:
         "fastas/mouse.fasta",
         "fastas/wheat.fasta",
         "fastas/hye.fasta",
-        "contaminants/universal.fasta",
+        "contaminants/hao.fasta",
         "fastas/human_contaminated_with_tenzer.fasta",
         "fastas/yeast_contaminated_with_tenzer.fasta",
         "fastas/ecoli_contaminated_with_tenzer.fasta",
         "fastas/mouse_contaminated_with_tenzer.fasta",
         "fastas/wheat_contaminated_with_tenzer.fasta",
         "fastas/hye_contaminated_with_tenzer.fasta",
-        "fastas/human_contaminated_with_universal.fasta",
-        "fastas/yeast_contaminated_with_universal.fasta",
-        "fastas/ecoli_contaminated_with_universal.fasta",
-        "fastas/mouse_contaminated_with_universal.fasta",
-        "fastas/wheat_contaminated_with_universal.fasta",
-        "fastas/hye_contaminated_with_universal.fasta",
+        "fastas/human_contaminated_with_hao.fasta",
+        "fastas/yeast_contaminated_with_hao.fasta",
+        "fastas/ecoli_contaminated_with_hao.fasta",
+        "fastas/mouse_contaminated_with_hao.fasta",
+        "fastas/wheat_contaminated_with_hao.fasta",
+        "fastas/hye_contaminated_with_hao.fasta",
 
 rule get_human_swissprot_trembl:
     output:
@@ -99,7 +99,7 @@ rule get_hye:
 
 rule get_Hao_group_contaminants:
     output:
-        "contaminants/universal.fasta"
+        "contaminants/hao.fasta"
     shell:
         """
         rm -rf Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics || True
