@@ -1,3 +1,13 @@
+rule all:
+    input:
+        "fastas/human.fasta",
+        "fastas/yeast.fasta",
+        "fastas/ecoli.fasta",
+        "fastas/mouse.fasta",
+        "fastas/wheat.fasta",
+        "fastas/hye.fasta",
+        "contaminants/universal.fasta",
+
 rule get_human_swissprot_trembl:
     output:
         "fastas/human_sp_tr.fasta"
@@ -85,6 +95,8 @@ rule get_Hao_group_contaminants:
         cp Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics/**/*.fasta contaminants
         cp Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics/Universal\ protein\ contaminant\ FASTA/0602_Universal\ Contaminants.fasta {output}
         """
+
+
 
 
 rule append_contaminants:
