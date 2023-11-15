@@ -7,6 +7,18 @@ rule all:
         "fastas/wheat.fasta",
         "fastas/hye.fasta",
         "contaminants/universal.fasta",
+        "fastas/human_contaminated_with_tenzer.fasta",
+        "fastas/yeast_contaminated_with_tenzer.fasta",
+        "fastas/ecoli_contaminated_with_tenzer.fasta",
+        "fastas/mouse_contaminated_with_tenzer.fasta",
+        "fastas/wheat_contaminated_with_tenzer.fasta",
+        "fastas/hye_contaminated_with_tenzer.fasta",
+        "fastas/human_contaminated_with_universal.fasta",
+        "fastas/yeast_contaminated_with_universal.fasta",
+        "fastas/ecoli_contaminated_with_universal.fasta",
+        "fastas/mouse_contaminated_with_universal.fasta",
+        "fastas/wheat_contaminated_with_universal.fasta",
+        "fastas/hye_contaminated_with_universal.fasta",
 
 rule get_human_swissprot_trembl:
     output:
