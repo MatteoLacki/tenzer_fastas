@@ -4,4 +4,4 @@ venv: clean_venv
 clean_venv:
 	rm -rf venv || True
 all: venv
-	venv/bin/snakemake -call fastas/{human,yeast,ecoli,mouse,hye}.fasta contaminats/universal.fasta
+	venv/bin/snakemake -call fastas/{human,yeast,ecoli,mouse,hye}.fasta fastas/{human,yeast,ecoli,mouse,hye}_contaminated_with_{tenzer,hao}.fasta
