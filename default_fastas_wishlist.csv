@@ -1,0 +1,13 @@
+TAG,URL,NAME,NOTE,"Name suggestion by https://jessegmeyerlab.github.io/proteomics-tutorial/ (
+[common or scientific name]-[taxon 
+id]-uniprot-[swiss-prot/trembl/proteome]-[UP# if 
+used]-[canonical/canonical plus isoform]-[release])",ALL OF THIS WILL BE USED TO AUTOMATICALLY DOWNLOAD THINGS. WE CAN EVEN KEEP THE LIST HERE AND DOWNLOAD IT EVERY TIME AUTOMATICALLY (GOOGLE HAS AN API FOR THAT).
+human_refprot,https://rest.uniprot.org/uniprotkb/stream?compressed=false&format=fasta&query=%28%28proteome%3AUP000005640%29%29,HumanRefprot_{yyyymmdd}_{cnt}entries.fasta,,,
+human,https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28%28taxonomy_id%3A9606%29%29%20AND%20%28reviewed%3Atrue%29,Human_{yyyymmdd}_UniProt_Taxon9606_Reviewed_{cnt}entries.fasta,,Human_9606_uniprot_reviewed_canonical_2024_01,
+mouse,https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28%28taxonomy_id%3A10090%29%29%20AND%20%28reviewed%3Atrue%29,Mouse_{yyyymmdd}_UniProt_Taxon10090_Reviewed_{cnt}entries.fasta,,,
+wheat,https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28%28taxonomy_id%3A4565%29%29,Wheat_{yyyymmdd}_UniProt_Taxon4565_{cnt}entries.fasta,,,
+ecoli,https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28%28taxonomy_id%3A83333%29%29%20AND%20%28reviewed%3Atrue%29,Ecoli_{yyyymmdd}_UniProt_Taxon83333_Reviewed_{cnt}entries.fasta,,,
+yeast,https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28%28taxonomy_id%3A643680%29%29,Yeast_{yyyymmdd}_UniProt_Taxon643680_{cnt}entries.fasta,strain Lalvin EC1118 / Prise de mousse,,
+hamster,https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28proteome%3AUP000001075%29,Hamster_{yyyymmdd}_UniProt_ProteomeUP000001075_{cnt}entries.fasta,CHO K1 cell line reference proteome,,
+fly,https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28%28taxonomy_id%3A7227%29%29,Fly_{yyyymmdd}_UniProt_Taxon7227_{cnt}entries.fasta,Drosophila melanogaster (Fruit fly),,
+HYE,human+yeast+ecoli,HYE_{yyyymmdd}_{cnt}entries.fasta,human+yeast+ecoli,,
