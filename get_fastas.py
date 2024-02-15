@@ -1,15 +1,17 @@
+#!/usr/bin/env python3
 import argparse
 import csv
 import functools
+import multiprocessing as mp
 import subprocess
 import traceback
 from datetime import datetime
-from multiprocessing import Pool
 from pathlib import Path
 
-# class args:
-#     config = Path("default_fastas_wishlist.csv")
-#     output = Path("/tmp/fastas")
+
+class args:
+    config = Path("default_fastas_wishlist.csv")
+    output = Path("/tmp/fastas")
 
 
 parser = argparse.ArgumentParser(description="Download fasta files.")
@@ -19,8 +21,7 @@ parser.add_argument(
     type=Path,
 )
 parser.add_argument(
-    "-o",
-    "--output",
+    "output",
     help="Output folder.",
     type=Path,
     default=None,
@@ -40,9 +41,8 @@ def count_entries(fastafile):
 RUN = functools.partial(subprocess.run, check=True, shell=True)
 
 
-def download_or_pass(tag_url_name):
-    tag, url, name = tag_url_name
-    date = datetime.today().strftime("%Y_%m_%d")
+def download_or_pass(tag_url_name_date):
+    tag, url, name, date = tag_url_name_date
     try:
         RUN(f'wget -O {args.output/name} "{url}"')
         cnt = count_entries(args.output / name)
@@ -50,23 +50,30 @@ def download_or_pass(tag_url_name):
         RUN(f"mv {args.output/name} {args.output/final_name}")
     except subprocess.CalledProcessError:
         (args.output / name).unlink()
-        return url, name
-    return tag, final_name, cnt
+        return False, tag, url, name
+    return True, tag, final_name, cnt
 
 
 if __name__ == "__main__":
+    date = datetime.today().strftime("%Y_%m_%d")
+
+    # read config csv
     with open(args.config, newline="") as csvfile:
         spamreader = iter(csv.reader(csvfile, delimiter=","))
         cols = next(spamreader)[:3]
         values = [row[:3] for row in spamreader]
 
-    with Pool(mp.cpu_count()) as pool:
-        results = pool.map(download_or_pass, values)
+    # download stuff
+    with mp.Pool(mp.cpu_count()) as pool:
+        results = pool.map(download_or_pass, [[*v, date] for v in values])
 
-    noncompound_entries = {x[0]: (x[1], x[2]) for x in results if len(x) == 3}
-    compound_entries = list(filter(lambda x: len(x) == 2, results))
+    # get compound fastas
+    # compound_entries = "noncompound_tag+noncompound_tag+...+noncompound_tag"
+    noncompound_entries = {x[1]: (x[2], x[3]) for x in results if x[0]}
+    compound_entries = [x[1:] for x in results if not x[0]]
+    tag_to_name_cnt = {}
 
-    for noncompound_tags, name in compound_entries:
+    for tag, noncompound_tags, name in compound_entries:
         try:
             noncompound_tags = noncompound_tags.split("+")
             for noncompound_tag in noncompound_tags:
@@ -74,18 +81,31 @@ if __name__ == "__main__":
                     print(f"Tag {noncompound_tag} not among the downloaded tags.")
                     break
             else:
-                date = datetime.today().strftime("%Y_%m_%d")
                 files_to_cat = []
                 total_cnt = 0
-                for tag in noncompound_tags:
-                    file, cnt = noncompound_entries[tag]
+                for noncompound_tag in noncompound_tags:
+                    file, cnt = noncompound_entries[noncompound_tag]
                     files_to_cat.append(str(args.output / file))
                     total_cnt += cnt
                 final_name = name.format(yyyymmdd=date, cnt=cnt)
 
+                tag_to_name_cnt[tag] = (final_name, total_cnt)
                 files = " ".join(files_to_cat)
-
                 RUN(f"cat {files} > {args.output/final_name}")
+
             break
         except Exception as exp:
             traceback.print_exc()
+
+    # update Hao's contaminants:
+    script = f"""
+    rm -rf Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics || True
+    git clone https://github.com/HaoGroup-ProtContLib/Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics.git
+    shopt -s globstar
+    mkdir -p contaminants
+    cp Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics/**/*.fasta contaminants
+    cp Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics/Universal\ protein\ contaminant\ FASTA/0602_Universal\ Contaminants.fasta contaminants/hao_{date}.fasta
+    """
+    RUN(script)
+
+    # append contaminants:
