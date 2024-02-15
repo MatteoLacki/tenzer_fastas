@@ -18,8 +18,12 @@ Each should include wildcards `{yyyymmdd}` and `{cnt}` which will be filled with
 The outputs will be stored by default in the `fastas` location.
 If you want to change it, make sure it exists.
 
+The outputs contain all the up-to-date fastas and the latest contaminants from Hao's group.
+Also, the repo contains the latest list of contaminants used by the Tenzer group.
 
 Dependencies:
 The script runs in bash under linux.
 We assume presence of the following tools:
 `rm`, `git`, `shopt`, `mkdir`, `cp`, `mv`, `wget`.
+
+
