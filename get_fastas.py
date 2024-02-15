@@ -71,7 +71,7 @@ if __name__ == "__main__":
     # compound_entries = "noncompound_tag+noncompound_tag+...+noncompound_tag"
     noncompound_entries = {x[1]: (x[2], x[3]) for x in results if x[0]}
     compound_entries = [x[1:] for x in results if not x[0]]
-    tag_to_name_cnt = {}
+    tag_to_name_cnt = {**noncompound_entries}
 
     for tag, noncompound_tags, name in compound_entries:
         try:
@@ -98,14 +98,26 @@ if __name__ == "__main__":
             traceback.print_exc()
 
     # update Hao's contaminants:
+    hao_contaminants = Path(f"contaminants/hao.fasta")
     script = f"""
     rm -rf Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics || True
     git clone https://github.com/HaoGroup-ProtContLib/Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics.git
     shopt -s globstar
     mkdir -p contaminants
     cp Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics/**/*.fasta contaminants
-    cp Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics/Universal\ protein\ contaminant\ FASTA/0602_Universal\ Contaminants.fasta contaminants/hao_{date}.fasta
+    cp Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics/Universal\ protein\ contaminant\ FASTA/0602_Universal\ Contaminants.fasta {hao_contaminants}
     """
     RUN(script)
 
     # append contaminants:
+    tenzer_contaminants = Path("contaminants/tenzer.fasta")
+    contaminants = [hao_contaminants, tenzer_contaminants]
+
+    for contaminant in contaminants:
+        if contaminant.exists():
+            for tag, (fasta_file, cnt) in tag_to_name_cnt.items():
+                fasta_path = args.output / fasta_file
+                contaminated_fasta = args.output / (
+                    fasta_path.stem + f"_contaminant_{contaminant.stem}.fasta"
+                )
+                RUN(f"cat {fasta_path} {contaminant} > {contaminated_fasta}")

@@ -23,4 +23,3 @@ Dependencies:
 The script runs in bash under linux.
 We assume presence of the following tools:
 `rm`, `git`, `shopt`, `mkdir`, `cp`, `mv`, `wget`.
-
