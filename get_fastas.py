@@ -4,6 +4,8 @@ import csv
 import shutil
 import subprocess
 import sys
+import threading
+import time
 import traceback
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -38,18 +40,98 @@ parser.add_argument(
 args = parser.parse_args()
 
 
-def count_entries(fastafile):
-    cnt = 0
-    with open(fastafile, "r") as f:
-        for l in f:
-            if l[0] == ">":
-                cnt += 1
-    return cnt
+class Progress:
+    """Live status of running downloads; finished ones scroll up as plain lines.
+
+    On a terminal, the active downloads are redrawn in place below the finished
+    ones. Otherwise only the finished lines are printed.
+    """
+
+    BAR = 20
+    REFRESH = 0.1  # seconds between redraws
+
+    def __init__(self, n_files):
+        self.n_files = n_files
+        self.n_done = 0
+        self.tty = sys.stdout.isatty()
+        self.lock = threading.Lock()
+        self.active = {}  # tag -> [start, nbytes, entries, total]
+        self.drawn = 0  # lines currently occupied by the active block
+        self.last_draw = 0.0
+
+    def start(self, tag, total):
+        with self.lock:
+            self.active[tag] = [time.monotonic(), 0, 0, total]
+            self._redraw()
+
+    def update(self, tag, nbytes, entries):
+        with self.lock:
+            state = self.active[tag]
+            state[1], state[2] = nbytes, entries
+            if time.monotonic() - self.last_draw >= self.REFRESH:
+                self._redraw()
+
+    def finish(self, tag, message):
+        with self.lock:
+            self.active.pop(tag, None)
+            self.n_done += 1
+            self._clear()
+            print(f"{tag:<28.28} {message}", flush=True)
+            self._redraw()
+
+    def _line(self, tag, state):
+        start, nbytes, entries, total = state
+        elapsed = max(time.monotonic() - start, 1e-9)
+        stats = f"{nbytes / 1e6:7.1f} MB {nbytes / 1e6 / elapsed:5.1f} MB/s"
+        if total:
+            filled = min(entries / total, 1.0)
+            bar = "#" * int(filled * self.BAR)
+            return (
+                f"{tag:<28.28} [{bar:<{self.BAR}}] {filled:6.1%} "
+                f"{entries:>9,}/{total:,} entries {stats}"
+            )
+        return f"{tag:<28.28} {entries:>9,} entries {stats}"
+
+    def _clear(self):
+        if self.tty and self.drawn:
+            sys.stdout.write(f"\x1b[{self.drawn}F\x1b[J")
+            self.drawn = 0
+
+    def _redraw(self):
+        if not self.tty:
+            return
+        self._clear()
+        width = shutil.get_terminal_size().columns - 1
+        lines = [self._line(t, s) for t, s in self.active.items()]
+        lines.append(f"{self.n_done}/{self.n_files} files done")
+        sys.stdout.write("\n".join(line[:width] for line in lines) + "\n")
+        sys.stdout.flush()
+        self.drawn = len(lines)
+        self.last_draw = time.monotonic()
 
 
-def fetch(url, path):
+def total_entries(url):
+    """Entry count announced by UniProt's search endpoint, or None."""
+    try:
+        search_url = url.replace("/stream?", "/search?") + "&size=1"
+        with urllib.request.urlopen(search_url, timeout=60) as response:
+            return int(response.headers["X-Total-Results"])
+    except (OSError, ValueError, TypeError, KeyError):
+        return None
+
+
+def fetch(url, path, on_progress, chunk_size=1 << 16):
+    """Stream url into path; return the number of fasta entries written."""
+    nbytes = entries = 0
+    previous = b"\n"  # so that a '>' in the very first byte is counted
     with urllib.request.urlopen(url, timeout=120) as response, open(path, "wb") as f:
-        shutil.copyfileobj(response, f)
+        while chunk := response.read(chunk_size):
+            f.write(chunk)
+            nbytes += len(chunk)
+            entries += (previous + chunk).count(b"\n>")
+            previous = chunk[-1:]
+            on_progress(nbytes, entries)
+    return entries
 
 
 def concatenate(sources, destination):
@@ -61,15 +143,20 @@ def concatenate(sources, destination):
 
 def download_or_pass(tag_url_name_date):
     tag, url, name, date = tag_url_name_date
+    progress.start(tag, total_entries(url))
     try:
-        fetch(url, args.output / name)
-        cnt = count_entries(args.output / name)
+        cnt = fetch(
+            url,
+            args.output / name,
+            lambda nbytes, entries: progress.update(tag, nbytes, entries),
+        )
         final_name = name.format(yyyymmdd=date, cnt=cnt)
         (args.output / name).rename(args.output / final_name)
     except OSError as e:
-        print(f"Download of {tag} failed: {e}", file=sys.stderr)
         (args.output / name).unlink(missing_ok=True)
+        progress.finish(tag, f"FAILED: {e}")
         return None
+    progress.finish(tag, f"done  {cnt:,} entries")
     return tag, final_name, cnt
 
 
@@ -87,6 +174,7 @@ if __name__ == "__main__":
     compound_entries = [row for row in values if "://" not in row[1]]
 
     # download stuff
+    progress = Progress(len(downloads))
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         results = list(pool.map(download_or_pass, [[*v, date] for v in downloads]))
 
