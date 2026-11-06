@@ -22,8 +22,7 @@ The outputs contain all the up-to-date fastas and the latest contaminants from H
 Also, the repo contains the latest list of contaminants used by the Tenzer group.
 
 Dependencies:
-The script runs in bash under linux.
-We assume presence of the following tools:
-`rm`, `git`, `shopt`, `mkdir`, `cp`, `mv`, `wget`.
+The script needs Python 3 (standard library only) and `git`.
+The Makefile additionally uses `rm` and `mkdir`.
 
 
