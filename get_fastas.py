@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 import argparse
 import csv
-import multiprocessing as mp
 import shutil
 import subprocess
 import sys
 import traceback
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 
@@ -27,6 +27,13 @@ parser.add_argument(
     help="Output folder.",
     type=Path,
     default=None,
+)
+parser.add_argument(
+    "-n",
+    "--workers",
+    help="Number of parallel downloads (default: %(default)s).",
+    type=int,
+    default=8,
 )
 args = parser.parse_args()
 
@@ -80,8 +87,8 @@ if __name__ == "__main__":
     compound_entries = [row for row in values if "://" not in row[1]]
 
     # download stuff
-    with mp.Pool(mp.cpu_count()) as pool:
-        results = pool.map(download_or_pass, [[*v, date] for v in downloads])
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        results = list(pool.map(download_or_pass, [[*v, date] for v in downloads]))
 
     # get compound fastas
     noncompound_entries = {x[0]: (x[1], x[2]) for x in results if x is not None}
