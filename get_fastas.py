@@ -7,10 +7,13 @@ import sys
 import threading
 import time
 import traceback
+import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
+
+from fasta_merge import add_contaminants
 
 
 class args:
@@ -37,6 +40,19 @@ parser.add_argument(
     type=int,
     default=8,
 )
+deduplication = parser.add_mutually_exclusive_group()
+deduplication.add_argument(
+    "--deduplicate-contaminants",
+    action="store_true",
+    help="Remove duplicate IDs and sequences when adding contaminants; contaminants win (default: keep all records).",
+)
+deduplication.add_argument(
+    "--no-deduplicate-contaminants",
+    dest="deduplicate_contaminants",
+    action="store_false",
+    help="Keep all records when adding contaminants (default). Warnings remain enabled.",
+)
+parser.set_defaults(deduplicate_contaminants=False)
 args = parser.parse_args()
 
 
@@ -145,14 +161,31 @@ def download_or_pass(tag_url_name_date):
     tag, url, name, date = tag_url_name_date
     progress.start(tag, total_entries(url))
     try:
-        cnt = fetch(
-            url,
-            args.output / name,
-            lambda nbytes, entries: progress.update(tag, nbytes, entries),
-        )
+        for attempt in range(4):
+            try:
+                cnt = fetch(
+                    url,
+                    args.output / name,
+                    lambda nbytes, entries: progress.update(tag, nbytes, entries),
+                )
+                break
+            except urllib.error.HTTPError as e:
+                if e.code not in (429, 500, 502, 503, 504) or attempt == 3:
+                    raise
+                delay = 5 * 2 ** attempt
+                try:
+                    delay = max(delay, float(e.headers.get("Retry-After", delay)))
+                except (ValueError, TypeError):
+                    pass
+                e.close()
+                (args.output / name).unlink(missing_ok=True)
+                print(f"{tag}: HTTP {e.code}; retrying in {delay:g}s", file=sys.stderr)
+                time.sleep(delay)
         final_name = name.format(yyyymmdd=date, cnt=cnt)
         (args.output / name).rename(args.output / final_name)
     except OSError as e:
+        if isinstance(e, urllib.error.HTTPError):
+            e.close()
         (args.output / name).unlink(missing_ok=True)
         progress.finish(tag, f"FAILED: {e}")
         return None
@@ -177,6 +210,9 @@ if __name__ == "__main__":
     progress = Progress(len(downloads))
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         results = list(pool.map(download_or_pass, [[*v, date] for v in downloads]))
+    failed_tags = [row[0] for row, result in zip(downloads, results) if result is None]
+    if failed_tags:
+        parser.exit(1, f"Download failed for: {', '.join(failed_tags)}; FASTA build incomplete.\n")
 
     # get compound fastas
     noncompound_entries = {x[0]: (x[1], x[2]) for x in results if x is not None}
@@ -233,4 +269,9 @@ if __name__ == "__main__":
                 contaminated_fasta = args.output / (
                     fasta_path.stem + f"_contaminant_{contaminant.stem}.fasta"
                 )
-                concatenate([fasta_path, contaminant], contaminated_fasta)
+                add_contaminants(
+                    fasta_path,
+                    contaminant,
+                    contaminated_fasta,
+                    deduplicate=args.deduplicate_contaminants,
+                )

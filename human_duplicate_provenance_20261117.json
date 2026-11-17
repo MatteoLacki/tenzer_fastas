@@ -1,0 +1,3214 @@
+{
+  "E9KXS6": {
+    "entryType": "UniProtKB unreviewed (TrEMBL)",
+    "primaryAccession": "E9KXS6",
+    "uniProtkbId": "E9KXS6_HUMAN",
+    "entryAudit": {
+      "firstPublicDate": "2011-04-05",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "2011-04-05",
+      "entryVersion": 72,
+      "sequenceVersion": 1
+    },
+    "annotationScore": 2.0,
+    "organism": {
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "taxonId": 9606,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ADR64840.1"
+        }
+      ],
+      "lineage": [
+        "Eukaryota",
+        "Metazoa",
+        "Chordata",
+        "Craniata",
+        "Vertebrata",
+        "Euteleostomi",
+        "Mammalia",
+        "Eutheria",
+        "Euarchontoglires",
+        "Primates",
+        "Haplorrhini",
+        "Catarrhini",
+        "Hominidae",
+        "Homo"
+      ]
+    },
+    "proteinExistence": "3: Inferred from homology",
+    "proteinDescription": {
+      "recommendedName": {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00039541"
+            }
+          ],
+          "value": "Homeobox protein MSX-1"
+        }
+      },
+      "alternativeNames": [
+        {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00042788"
+              }
+            ],
+            "value": "Msh homeobox 1-like protein"
+          }
+        }
+      ],
+      "flag": "Fragment"
+    },
+    "genes": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ADR64840.1"
+            }
+          ],
+          "value": "MSX1"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00049706"
+              }
+            ],
+            "value": "Interacts with CREBBP/CBP, TBP and SP1; interaction with these transcription activators may inhibit autoinactivation. Interacts (via C-terminus) with PIAS1 (via N-terminus); the interaction is required for the localization of both proteins to the nuclear periphery and specific binding of MSX1 to the core enhancer region in target gene promoters. Interacts with H1-5"
+          }
+        ],
+        "commentType": "SUBUNIT"
+      },
+      {
+        "commentType": "SUBCELLULAR LOCATION",
+        "subcellularLocations": [
+          {
+            "location": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00004123"
+                },
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "PROSITE-ProRule",
+                  "id": "PRU00108"
+                },
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "RuleBase",
+                  "id": "RU000682"
+                }
+              ],
+              "value": "Nucleus",
+              "id": "SL-0191"
+            }
+          }
+        ]
+      },
+      {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00038425"
+              }
+            ],
+            "value": "Belongs to the Msh homeobox family"
+          }
+        ],
+        "commentType": "SIMILARITY"
+      }
+    ],
+    "features": [
+      {
+        "type": "Domain",
+        "location": {
+          "start": {
+            "value": 13,
+            "modifier": "EXACT"
+          },
+          "end": {
+            "value": 73,
+            "modifier": "EXACT"
+          }
+        },
+        "description": "Homeobox",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000259",
+            "source": "PROSITE",
+            "id": "PS50071"
+          }
+        ]
+      },
+      {
+        "type": "DNA binding",
+        "location": {
+          "start": {
+            "value": 15,
+            "modifier": "EXACT"
+          },
+          "end": {
+            "value": 74,
+            "modifier": "EXACT"
+          }
+        },
+        "description": "Homeobox",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00108"
+          }
+        ]
+      },
+      {
+        "type": "Non-terminal residue",
+        "location": {
+          "start": {
+            "value": 1,
+            "modifier": "EXACT"
+          },
+          "end": {
+            "value": 1,
+            "modifier": "EXACT"
+          }
+        },
+        "description": "",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "ADR64840.1"
+          }
+        ]
+      }
+    ],
+    "keywords": [
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00022473"
+          }
+        ],
+        "id": "KW-0217",
+        "category": "Molecular function",
+        "name": "Developmental protein"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023125"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00108"
+          }
+        ],
+        "id": "KW-0238",
+        "category": "Molecular function",
+        "name": "DNA-binding"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023155"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00108"
+          }
+        ],
+        "id": "KW-0371",
+        "category": "Domain",
+        "name": "Homeobox"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023242"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00108"
+          }
+        ],
+        "id": "KW-0539",
+        "category": "Cellular component",
+        "name": "Nucleus"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00022491"
+          }
+        ],
+        "id": "KW-0678",
+        "category": "Molecular function",
+        "name": "Repressor"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023163"
+          }
+        ],
+        "id": "KW-0804",
+        "category": "Biological process",
+        "name": "Transcription"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023015"
+          }
+        ],
+        "id": "KW-0805",
+        "category": "Biological process",
+        "name": "Transcription regulation"
+      }
+    ],
+    "references": [
+      {
+        "referenceNumber": 1,
+        "citation": {
+          "id": "21111400",
+          "citationType": "journal article",
+          "authors": [
+            "Paixao-Cortes V.R.",
+            "Braga T.",
+            "Salzano F.M.",
+            "Mundstock K.",
+            "Mundstock C.A.",
+            "Bortolini M.C."
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "21111400"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.archoralbio.2010.10.020"
+            }
+          ],
+          "title": "PAX9 and MSX1 transcription factor genes in non-syndromic dental agenesis.",
+          "publicationDate": "2010",
+          "journal": "Arch. Oral Biol.",
+          "firstPage": "0",
+          "lastPage": "0",
+          "volume": "0"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "ADR64840.1"
+          }
+        ]
+      }
+    ],
+    "uniProtKBCrossReferences": [
+      {
+        "database": "EMBL",
+        "id": "HM213907",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "ADR64840.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      {
+        "database": "AlphaFoldDB",
+        "id": "E9KXS6",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "PeptideAtlas",
+        "id": "E9KXS6",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "OrthoDB",
+        "id": "6159439at2759",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "ChiTaRS",
+        "id": "MSX1",
+        "properties": [
+          {
+            "key": "OrganismName",
+            "value": "human"
+          }
+        ]
+      },
+      {
+        "database": "GO",
+        "id": "GO:0005634",
+        "properties": [
+          {
+            "key": "GoTerm",
+            "value": "C:nucleus"
+          },
+          {
+            "key": "GoEvidenceType",
+            "value": "IEA:UniProtKB-SubCell"
+          }
+        ]
+      },
+      {
+        "database": "GO",
+        "id": "GO:0003677",
+        "properties": [
+          {
+            "key": "GoTerm",
+            "value": "F:DNA binding"
+          },
+          {
+            "key": "GoEvidenceType",
+            "value": "IEA:UniProtKB-UniRule"
+          }
+        ]
+      },
+      {
+        "database": "GO",
+        "id": "GO:0000981",
+        "properties": [
+          {
+            "key": "GoTerm",
+            "value": "F:DNA-binding transcription factor activity, RNA polymerase II-specific"
+          },
+          {
+            "key": "GoEvidenceType",
+            "value": "IEA:InterPro"
+          }
+        ]
+      },
+      {
+        "database": "CDD",
+        "id": "cd00086",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "homeodomain"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "FunFam",
+        "id": "1.10.10.60:FF:000271",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeobox protein MSX-2"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "Gene3D",
+        "id": "1.10.10.60",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeodomain-like"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR001356",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HD"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR020479",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HD_metazoa"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR017970",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeobox_CS"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR009057",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeodomain-like_sf"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR000047",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HTH_motif"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR050674",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Msh_Homeobox_Regulators"
+          }
+        ]
+      },
+      {
+        "database": "PANTHER",
+        "id": "PTHR24338",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX PROTEIN MSX"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "PANTHER",
+        "id": "PTHR24338:SF8",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX PROTEIN MSX-1"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "Pfam",
+        "id": "PF00046",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeodomain"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "PRINTS",
+        "id": "PR00024",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX"
+          }
+        ]
+      },
+      {
+        "database": "PRINTS",
+        "id": "PR00031",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HTHREPRESSR"
+          }
+        ]
+      },
+      {
+        "database": "SMART",
+        "id": "SM00389",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOX"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "SUPFAM",
+        "id": "SSF46689",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeodomain-like"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "PROSITE",
+        "id": "PS00027",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX_1"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "PROSITE",
+        "id": "PS50071",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX_2"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "sequence": {
+      "value": "RLSPPACTLRKHKTNRKPRTPFTTAQLLALERKFRQKQYLSIAERAEFSSSLSLTETQVKIWFQNRRAKAKRLQEAELEKLKMAAKPMLPPAAFGLSFPLGGPAAVAAAAGASLYGASGPFQRAALPVAPVGLYTAHVGYSMYHLT",
+      "length": 146,
+      "molWeight": 15983,
+      "crc64": "A27D01F8D87D92EC",
+      "md5": "4C9A21A1DB4665E7D66CA827489BC715"
+    },
+    "extraAttributes": {
+      "countByCommentType": {
+        "SUBUNIT": 1,
+        "SUBCELLULAR LOCATION": 1,
+        "SIMILARITY": 1
+      },
+      "countByFeatureType": {
+        "Domain": 1,
+        "DNA binding": 1,
+        "Non-terminal residue": 1
+      },
+      "uniParcId": "UPI0001F8CD8C"
+    }
+  },
+  "E9KXS7": {
+    "entryType": "UniProtKB unreviewed (TrEMBL)",
+    "primaryAccession": "E9KXS7",
+    "uniProtkbId": "E9KXS7_HUMAN",
+    "entryAudit": {
+      "firstPublicDate": "2011-04-05",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "2011-04-05",
+      "entryVersion": 71,
+      "sequenceVersion": 1
+    },
+    "annotationScore": 2.0,
+    "organism": {
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "taxonId": 9606,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ADR64841.1"
+        }
+      ],
+      "lineage": [
+        "Eukaryota",
+        "Metazoa",
+        "Chordata",
+        "Craniata",
+        "Vertebrata",
+        "Euteleostomi",
+        "Mammalia",
+        "Eutheria",
+        "Euarchontoglires",
+        "Primates",
+        "Haplorrhini",
+        "Catarrhini",
+        "Hominidae",
+        "Homo"
+      ]
+    },
+    "proteinExistence": "3: Inferred from homology",
+    "proteinDescription": {
+      "recommendedName": {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00039541"
+            }
+          ],
+          "value": "Homeobox protein MSX-1"
+        }
+      },
+      "alternativeNames": [
+        {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00042788"
+              }
+            ],
+            "value": "Msh homeobox 1-like protein"
+          }
+        }
+      ],
+      "flag": "Fragment"
+    },
+    "genes": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ADR64841.1"
+            }
+          ],
+          "value": "MSX1"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00049706"
+              }
+            ],
+            "value": "Interacts with CREBBP/CBP, TBP and SP1; interaction with these transcription activators may inhibit autoinactivation. Interacts (via C-terminus) with PIAS1 (via N-terminus); the interaction is required for the localization of both proteins to the nuclear periphery and specific binding of MSX1 to the core enhancer region in target gene promoters. Interacts with H1-5"
+          }
+        ],
+        "commentType": "SUBUNIT"
+      },
+      {
+        "commentType": "SUBCELLULAR LOCATION",
+        "subcellularLocations": [
+          {
+            "location": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00004123"
+                },
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "PROSITE-ProRule",
+                  "id": "PRU00108"
+                },
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "RuleBase",
+                  "id": "RU000682"
+                }
+              ],
+              "value": "Nucleus",
+              "id": "SL-0191"
+            }
+          }
+        ]
+      },
+      {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00038425"
+              }
+            ],
+            "value": "Belongs to the Msh homeobox family"
+          }
+        ],
+        "commentType": "SIMILARITY"
+      }
+    ],
+    "features": [
+      {
+        "type": "Domain",
+        "location": {
+          "start": {
+            "value": 13,
+            "modifier": "EXACT"
+          },
+          "end": {
+            "value": 73,
+            "modifier": "EXACT"
+          }
+        },
+        "description": "Homeobox",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000259",
+            "source": "PROSITE",
+            "id": "PS50071"
+          }
+        ]
+      },
+      {
+        "type": "DNA binding",
+        "location": {
+          "start": {
+            "value": 15,
+            "modifier": "EXACT"
+          },
+          "end": {
+            "value": 74,
+            "modifier": "EXACT"
+          }
+        },
+        "description": "Homeobox",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00108"
+          }
+        ]
+      },
+      {
+        "type": "Non-terminal residue",
+        "location": {
+          "start": {
+            "value": 1,
+            "modifier": "EXACT"
+          },
+          "end": {
+            "value": 1,
+            "modifier": "EXACT"
+          }
+        },
+        "description": "",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "ADR64841.1"
+          }
+        ]
+      }
+    ],
+    "keywords": [
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00022473"
+          }
+        ],
+        "id": "KW-0217",
+        "category": "Molecular function",
+        "name": "Developmental protein"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023125"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00108"
+          }
+        ],
+        "id": "KW-0238",
+        "category": "Molecular function",
+        "name": "DNA-binding"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023155"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00108"
+          }
+        ],
+        "id": "KW-0371",
+        "category": "Domain",
+        "name": "Homeobox"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023242"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00108"
+          }
+        ],
+        "id": "KW-0539",
+        "category": "Cellular component",
+        "name": "Nucleus"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00022491"
+          }
+        ],
+        "id": "KW-0678",
+        "category": "Molecular function",
+        "name": "Repressor"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023163"
+          }
+        ],
+        "id": "KW-0804",
+        "category": "Biological process",
+        "name": "Transcription"
+      },
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00023015"
+          }
+        ],
+        "id": "KW-0805",
+        "category": "Biological process",
+        "name": "Transcription regulation"
+      }
+    ],
+    "references": [
+      {
+        "referenceNumber": 1,
+        "citation": {
+          "id": "21111400",
+          "citationType": "journal article",
+          "authors": [
+            "Paixao-Cortes V.R.",
+            "Braga T.",
+            "Salzano F.M.",
+            "Mundstock K.",
+            "Mundstock C.A.",
+            "Bortolini M.C."
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "21111400"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.archoralbio.2010.10.020"
+            }
+          ],
+          "title": "PAX9 and MSX1 transcription factor genes in non-syndromic dental agenesis.",
+          "publicationDate": "2010",
+          "journal": "Arch. Oral Biol.",
+          "firstPage": "0",
+          "lastPage": "0",
+          "volume": "0"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "ADR64841.1"
+          }
+        ]
+      }
+    ],
+    "uniProtKBCrossReferences": [
+      {
+        "database": "EMBL",
+        "id": "HM213908",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "ADR64841.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      {
+        "database": "AlphaFoldDB",
+        "id": "E9KXS7",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "OrthoDB",
+        "id": "6159439at2759",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "ChiTaRS",
+        "id": "MSX1",
+        "properties": [
+          {
+            "key": "OrganismName",
+            "value": "human"
+          }
+        ]
+      },
+      {
+        "database": "GO",
+        "id": "GO:0005634",
+        "properties": [
+          {
+            "key": "GoTerm",
+            "value": "C:nucleus"
+          },
+          {
+            "key": "GoEvidenceType",
+            "value": "IEA:UniProtKB-SubCell"
+          }
+        ]
+      },
+      {
+        "database": "GO",
+        "id": "GO:0003677",
+        "properties": [
+          {
+            "key": "GoTerm",
+            "value": "F:DNA binding"
+          },
+          {
+            "key": "GoEvidenceType",
+            "value": "IEA:UniProtKB-UniRule"
+          }
+        ]
+      },
+      {
+        "database": "GO",
+        "id": "GO:0000981",
+        "properties": [
+          {
+            "key": "GoTerm",
+            "value": "F:DNA-binding transcription factor activity, RNA polymerase II-specific"
+          },
+          {
+            "key": "GoEvidenceType",
+            "value": "IEA:InterPro"
+          }
+        ]
+      },
+      {
+        "database": "CDD",
+        "id": "cd00086",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "homeodomain"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "FunFam",
+        "id": "1.10.10.60:FF:000271",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeobox protein MSX-2"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "Gene3D",
+        "id": "1.10.10.60",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeodomain-like"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR001356",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HD"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR020479",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HD_metazoa"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR017970",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeobox_CS"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR009057",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeodomain-like_sf"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR000047",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HTH_motif"
+          }
+        ]
+      },
+      {
+        "database": "InterPro",
+        "id": "IPR050674",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Msh_Homeobox_Regulators"
+          }
+        ]
+      },
+      {
+        "database": "PANTHER",
+        "id": "PTHR24338",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX PROTEIN MSX"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "PANTHER",
+        "id": "PTHR24338:SF8",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX PROTEIN MSX-1"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "Pfam",
+        "id": "PF00046",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeodomain"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "PRINTS",
+        "id": "PR00024",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX"
+          }
+        ]
+      },
+      {
+        "database": "PRINTS",
+        "id": "PR00031",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HTHREPRESSR"
+          }
+        ]
+      },
+      {
+        "database": "SMART",
+        "id": "SM00389",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOX"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "SUPFAM",
+        "id": "SSF46689",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "Homeodomain-like"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "PROSITE",
+        "id": "PS00027",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX_1"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "database": "PROSITE",
+        "id": "PS50071",
+        "properties": [
+          {
+            "key": "EntryName",
+            "value": "HOMEOBOX_2"
+          },
+          {
+            "key": "MatchStatus",
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "sequence": {
+      "value": "RLSPPACTLRKHKTNRKPRTPFTTAQLLALERKFRQKQYLSIAERAEFSSSLSLTETQVKIWFQNRRAKAKRLQEAELEKLKMAAKPMLPPAAFGLSFPLGGPAAVAAAAGASLYGASGPFQRAALPVAPVGLYTAHVGYSMYHLT",
+      "length": 146,
+      "molWeight": 15983,
+      "crc64": "A27D01F8D87D92EC",
+      "md5": "4C9A21A1DB4665E7D66CA827489BC715"
+    },
+    "extraAttributes": {
+      "countByCommentType": {
+        "SUBUNIT": 1,
+        "SUBCELLULAR LOCATION": 1,
+        "SIMILARITY": 1
+      },
+      "countByFeatureType": {
+        "Domain": 1,
+        "DNA binding": 1,
+        "Non-terminal residue": 1
+      },
+      "uniParcId": "UPI0001F8CD8C"
+    }
+  },
+  "A0ACP2A733": {
+    "entryType": "UniProtKB unreviewed (TrEMBL)",
+    "primaryAccession": "A0ACP2A733",
+    "uniProtkbId": "A0ACP2A733_HUMAN",
+    "entryAudit": {
+      "firstPublicDate": "2026-11-04",
+      "lastAnnotationUpdateDate": "2026-11-04",
+      "lastSequenceUpdateDate": "2026-11-04",
+      "entryVersion": 1,
+      "sequenceVersion": 1
+    },
+    "annotationScore": 1.0,
+    "organism": {
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "taxonId": 9606,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Ensembl",
+          "id": "ENSP00000646352.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000005640"
+        }
+      ],
+      "lineage": [
+        "Eukaryota",
+        "Metazoa",
+        "Chordata",
+        "Craniata",
+        "Vertebrata",
+        "Euteleostomi",
+        "Mammalia",
+        "Eutheria",
+        "Euarchontoglires",
+        "Primates",
+        "Haplorrhini",
+        "Catarrhini",
+        "Hominidae",
+        "Homo"
+      ]
+    },
+    "proteinExistence": "4: Predicted",
+    "proteinDescription": {
+      "submissionNames": [
+        {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "Ensembl",
+                "id": "ENSP00000646352.1"
+              }
+            ],
+            "value": "Cytochrome P450 family 3 subfamily A member 5"
+          }
+        }
+      ]
+    },
+    "genes": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Ensembl",
+              "id": "ENSP00000646352.1"
+            }
+          ],
+          "value": "CYP3A5"
+        }
+      }
+    ],
+    "keywords": [
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000005640"
+          }
+        ],
+        "id": "KW-1185",
+        "category": "Technical term",
+        "name": "Reference proteome"
+      }
+    ],
+    "references": [
+      {
+        "referenceNumber": 1,
+        "citation": {
+          "id": "11237011",
+          "citationType": "journal article",
+          "authoringGroup": [
+            "International Human Genome Sequencing Consortium"
+          ],
+          "authors": [
+            "Lander E.S.",
+            "Linton L.M.",
+            "Birren B.",
+            "Nusbaum C.",
+            "Zody M.C.",
+            "Baldwin J.",
+            "Devon K.",
+            "Dewar K.",
+            "Doyle M.",
+            "FitzHugh W.",
+            "Funke R.",
+            "Gage D.",
+            "Harris K.",
+            "Heaford A.",
+            "Howland J.",
+            "Kann L.",
+            "Lehoczky J.",
+            "LeVine R.",
+            "McEwan P.",
+            "McKernan K.",
+            "Meldrim J.",
+            "Mesirov J.P.",
+            "Miranda C.",
+            "Morris W.",
+            "Naylor J.",
+            "Raymond C.",
+            "Rosetti M.",
+            "Santos R.",
+            "Sheridan A.",
+            "Sougnez C.",
+            "Stange-Thomann N.",
+            "Stojanovic N.",
+            "Subramanian A.",
+            "Wyman D.",
+            "Rogers J.",
+            "Sulston J.",
+            "Ainscough R.",
+            "Beck S.",
+            "Bentley D.",
+            "Burton J.",
+            "Clee C.",
+            "Carter N.",
+            "Coulson A.",
+            "Deadman R.",
+            "Deloukas P.",
+            "Dunham A.",
+            "Dunham I.",
+            "Durbin R.",
+            "French L.",
+            "Grafham D.",
+            "Gregory S.",
+            "Hubbard T.",
+            "Humphray S.",
+            "Hunt A.",
+            "Jones M.",
+            "Lloyd C.",
+            "McMurray A.",
+            "Matthews L.",
+            "Mercer S.",
+            "Milne S.",
+            "Mullikin J.C.",
+            "Mungall A.",
+            "Plumb R.",
+            "Ross M.",
+            "Shownkeen R.",
+            "Sims S.",
+            "Waterston R.H.",
+            "Wilson R.K.",
+            "Hillier L.W.",
+            "McPherson J.D.",
+            "Marra M.A.",
+            "Mardis E.R.",
+            "Fulton L.A.",
+            "Chinwalla A.T.",
+            "Pepin K.H.",
+            "Gish W.R.",
+            "Chissoe S.L.",
+            "Wendl M.C.",
+            "Delehaunty K.D.",
+            "Miner T.L.",
+            "Delehaunty A.",
+            "Kramer J.B.",
+            "Cook L.L.",
+            "Fulton R.S.",
+            "Johnson D.L.",
+            "Minx P.J.",
+            "Clifton S.W.",
+            "Hawkins T.",
+            "Branscomb E.",
+            "Predki P.",
+            "Richardson P.",
+            "Wenning S.",
+            "Slezak T.",
+            "Doggett N.",
+            "Cheng J.F.",
+            "Olsen A.",
+            "Lucas S.",
+            "Elkin C.",
+            "Uberbacher E.",
+            "Frazier M.",
+            "Gibbs R.A.",
+            "Muzny D.M.",
+            "Scherer S.E.",
+            "Bouck J.B.",
+            "Sodergren E.J.",
+            "Worley K.C.",
+            "Rives C.M.",
+            "Gorrell J.H.",
+            "Metzker M.L.",
+            "Naylor S.L.",
+            "Kucherlapati R.S.",
+            "Nelson D.L.",
+            "Weinstock G.M.",
+            "Sakaki Y.",
+            "Fujiyama A.",
+            "Hattori M.",
+            "Yada T.",
+            "Toyoda A.",
+            "Itoh T.",
+            "Kawagoe C.",
+            "Watanabe H.",
+            "Totoki Y.",
+            "Taylor T.",
+            "Weissenbach J.",
+            "Heilig R.",
+            "Saurin W.",
+            "Artiguenave F.",
+            "Brottier P.",
+            "Bruls T.",
+            "Pelletier E.",
+            "Robert C.",
+            "Wincker P.",
+            "Smith D.R.",
+            "Doucette-Stamm L.",
+            "Rubenfield M.",
+            "Weinstock K.",
+            "Lee H.M.",
+            "Dubois J.",
+            "Rosenthal A.",
+            "Platzer M.",
+            "Nyakatura G.",
+            "Taudien S.",
+            "Rump A.",
+            "Yang H.",
+            "Yu J.",
+            "Wang J.",
+            "Huang G.",
+            "Gu J.",
+            "Hood L.",
+            "Rowen L.",
+            "Madan A.",
+            "Qin S.",
+            "Davis R.W.",
+            "Federspiel N.A.",
+            "Abola A.P.",
+            "Proctor M.J.",
+            "Myers R.M.",
+            "Schmutz J.",
+            "Dickson M.",
+            "Grimwood J.",
+            "Cox D.R.",
+            "Olson M.V.",
+            "Kaul R.",
+            "Raymond C.",
+            "Shimizu N.",
+            "Kawasaki K.",
+            "Minoshima S.",
+            "Evans G.A.",
+            "Athanasiou M.",
+            "Schultz R.",
+            "Roe B.A.",
+            "Chen F.",
+            "Pan H.",
+            "Ramser J.",
+            "Lehrach H.",
+            "Reinhardt R.",
+            "McCombie W.R.",
+            "de la Bastide M.",
+            "Dedhia N.",
+            "Blocker H.",
+            "Hornischer K.",
+            "Nordsiek G.",
+            "Agarwala R.",
+            "Aravind L.",
+            "Bailey J.A.",
+            "Bateman A.",
+            "Batzoglou S.",
+            "Birney E.",
+            "Bork P.",
+            "Brown D.G.",
+            "Burge C.B.",
+            "Cerutti L.",
+            "Chen H.C.",
+            "Church D.",
+            "Clamp M.",
+            "Copley R.R.",
+            "Doerks T.",
+            "Eddy S.R.",
+            "Eichler E.E.",
+            "Furey T.S.",
+            "Galagan J.",
+            "Gilbert J.G.",
+            "Harmon C.",
+            "Hayashizaki Y.",
+            "Haussler D.",
+            "Hermjakob H.",
+            "Hokamp K.",
+            "Jang W.",
+            "Johnson L.S.",
+            "Jones T.A.",
+            "Kasif S.",
+            "Kaspryzk A.",
+            "Kennedy S.",
+            "Kent W.J.",
+            "Kitts P.",
+            "Koonin E.V.",
+            "Korf I.",
+            "Kulp D.",
+            "Lancet D.",
+            "Lowe T.M.",
+            "McLysaght A.",
+            "Mikkelsen T.",
+            "Moran J.V.",
+            "Mulder N.",
+            "Pollara V.J.",
+            "Ponting C.P.",
+            "Schuler G.",
+            "Schultz J.",
+            "Slater G.",
+            "Smit A.F.",
+            "Stupka E.",
+            "Szustakowski J.",
+            "Thierry-Mieg D.",
+            "Thierry-Mieg J.",
+            "Wagner L.",
+            "Wallis J.",
+            "Wheeler R.",
+            "Williams A.",
+            "Wolf Y.I.",
+            "Wolfe K.H.",
+            "Yang S.P.",
+            "Yeh R.F.",
+            "Collins F.",
+            "Guyer M.S.",
+            "Peterson J.",
+            "Felsenfeld A.",
+            "Wetterstrand K.A.",
+            "Patrinos A.",
+            "Morgan M.J.",
+            "de Jong P.",
+            "Catanese J.J.",
+            "Osoegawa K.",
+            "Shizuya H.",
+            "Choi S.",
+            "Chen Y.J."
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "11237011"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35057062"
+            }
+          ],
+          "title": "Initial sequencing and analysis of the human genome.",
+          "publicationDate": "2001",
+          "journal": "Nature",
+          "firstPage": "860",
+          "lastPage": "921",
+          "volume": "409"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSP00000646352.1"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000005640"
+          }
+        ]
+      },
+      {
+        "referenceNumber": 2,
+        "citation": {
+          "id": "12853948",
+          "citationType": "journal article",
+          "authors": [
+            "Hillier L.W.",
+            "Fulton R.S.",
+            "Fulton L.A.",
+            "Graves T.A.",
+            "Pepin K.H.",
+            "Wagner-McPherson C.",
+            "Layman D.",
+            "Maas J.",
+            "Jaeger S.",
+            "Walker R.",
+            "Wylie K.",
+            "Sekhon M.",
+            "Becker M.C.",
+            "O'Laughlin M.D.",
+            "Schaller M.E.",
+            "Fewell G.A.",
+            "Delehaunty K.D.",
+            "Miner T.L.",
+            "Nash W.E.",
+            "Cordes M.",
+            "Du H.",
+            "Sun H.",
+            "Edwards J.",
+            "Bradshaw-Cordum H.",
+            "Ali J.",
+            "Andrews S.",
+            "Isak A.",
+            "Vanbrunt A.",
+            "Nguyen C.",
+            "Du F.",
+            "Lamar B.",
+            "Courtney L.",
+            "Kalicki J.",
+            "Ozersky P.",
+            "Bielicki L.",
+            "Scott K.",
+            "Holmes A.",
+            "Harkins R.",
+            "Harris A.",
+            "Strong C.M.",
+            "Hou S.",
+            "Tomlinson C.",
+            "Dauphin-Kohlberg S.",
+            "Kozlowicz-Reilly A.",
+            "Leonard S.",
+            "Rohlfing T.",
+            "Rock S.M.",
+            "Tin-Wollam A.M.",
+            "Abbott A.",
+            "Minx P.",
+            "Maupin R.",
+            "Strowmatt C.",
+            "Latreille P.",
+            "Miller N.",
+            "Johnson D.",
+            "Murray J.",
+            "Woessner J.P.",
+            "Wendl M.C.",
+            "Yang S.P.",
+            "Schultz B.R.",
+            "Wallis J.W.",
+            "Spieth J.",
+            "Bieri T.A.",
+            "Nelson J.O.",
+            "Berkowicz N.",
+            "Wohldmann P.E.",
+            "Cook L.L.",
+            "Hickenbotham M.T.",
+            "Eldred J.",
+            "Williams D.",
+            "Bedell J.A.",
+            "Mardis E.R.",
+            "Clifton S.W.",
+            "Chissoe S.L.",
+            "Marra M.A.",
+            "Raymond C.",
+            "Haugen E.",
+            "Gillett W.",
+            "Zhou Y.",
+            "James R.",
+            "Phelps K.",
+            "Iadanoto S.",
+            "Bubb K.",
+            "Simms E.",
+            "Levy R.",
+            "Clendenning J.",
+            "Kaul R.",
+            "Kent W.J.",
+            "Furey T.S.",
+            "Baertsch R.A.",
+            "Brent M.R.",
+            "Keibler E.",
+            "Flicek P.",
+            "Bork P.",
+            "Suyama M.",
+            "Bailey J.A.",
+            "Portnoy M.E.",
+            "Torrents D.",
+            "Chinwalla A.T.",
+            "Gish W.R.",
+            "Eddy S.R.",
+            "McPherson J.D.",
+            "Olson M.V.",
+            "Eichler E.E.",
+            "Green E.D.",
+            "Waterston R.H.",
+            "Wilson R.K."
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "12853948"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature01782"
+            }
+          ],
+          "title": "The DNA sequence of human chromosome 7.",
+          "publicationDate": "2003",
+          "journal": "Nature",
+          "firstPage": "157",
+          "lastPage": "164",
+          "volume": "424"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSP00000646352.1"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000005640"
+          }
+        ]
+      },
+      {
+        "referenceNumber": 3,
+        "citation": {
+          "id": "15496913",
+          "citationType": "journal article",
+          "authoringGroup": [
+            "International Human Genome Sequencing Consortium"
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "15496913"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature03001"
+            }
+          ],
+          "title": "Finishing the euchromatic sequence of the human genome.",
+          "publicationDate": "2004",
+          "journal": "Nature",
+          "firstPage": "931",
+          "lastPage": "945",
+          "volume": "431"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSP00000646352.1"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000005640"
+          }
+        ]
+      },
+      {
+        "referenceNumber": 4,
+        "citation": {
+          "id": "CI-20IM2DDAQPFF7",
+          "citationType": "submission",
+          "authoringGroup": [
+            "Ensembl"
+          ],
+          "publicationDate": "JUL-2026",
+          "submissionDatabase": "UniProtKB"
+        },
+        "referencePositions": [
+          "IDENTIFICATION"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSP00000646352.1"
+          }
+        ]
+      }
+    ],
+    "uniProtKBCrossReferences": [
+      {
+        "database": "EMBL",
+        "id": "AC005020",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "-"
+          },
+          {
+            "key": "Status",
+            "value": "NOT_ANNOTATED_CDS"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      {
+        "database": "EMBL",
+        "id": "KF459642",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "-"
+          },
+          {
+            "key": "Status",
+            "value": "NOT_ANNOTATED_CDS"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      {
+        "database": "Ensembl",
+        "id": "ENST00000976535.1",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "ENSP00000646352.1"
+          },
+          {
+            "key": "GeneId",
+            "value": "ENSG00000106258.18"
+          }
+        ]
+      },
+      {
+        "database": "HGNC",
+        "id": "HGNC:2638",
+        "properties": [
+          {
+            "key": "GeneName",
+            "value": "CYP3A5"
+          }
+        ]
+      },
+      {
+        "database": "OpenTargets",
+        "id": "ENSG00000106258",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "GeneTree",
+        "id": "ENSGT00950000182958",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "Proteomes",
+        "id": "UP000005640",
+        "properties": [
+          {
+            "key": "Component",
+            "value": "Chromosome 7"
+          }
+        ]
+      }
+    ],
+    "sequence": {
+      "value": "MDLIPNLAVETWLLLAVSLVLLYLMRVPKSAKSPLTKQT",
+      "length": 39,
+      "molWeight": 4367,
+      "crc64": "EE9306EBA1C3A3A9",
+      "md5": "C616E56CA6A55E234C47F9618493BAC9"
+    },
+    "extraAttributes": {
+      "uniParcId": "UPI00001A9DF5"
+    }
+  },
+  "A0ACP2A738": {
+    "entryType": "UniProtKB unreviewed (TrEMBL)",
+    "primaryAccession": "A0ACP2A738",
+    "uniProtkbId": "A0ACP2A738_HUMAN",
+    "entryAudit": {
+      "firstPublicDate": "2026-11-04",
+      "lastAnnotationUpdateDate": "2026-11-04",
+      "lastSequenceUpdateDate": "2026-11-04",
+      "entryVersion": 1,
+      "sequenceVersion": 1
+    },
+    "annotationScore": 1.0,
+    "organism": {
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "taxonId": 9606,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Ensembl",
+          "id": "ENSP00000646354.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000005640"
+        }
+      ],
+      "lineage": [
+        "Eukaryota",
+        "Metazoa",
+        "Chordata",
+        "Craniata",
+        "Vertebrata",
+        "Euteleostomi",
+        "Mammalia",
+        "Eutheria",
+        "Euarchontoglires",
+        "Primates",
+        "Haplorrhini",
+        "Catarrhini",
+        "Hominidae",
+        "Homo"
+      ]
+    },
+    "proteinExistence": "4: Predicted",
+    "proteinDescription": {
+      "submissionNames": [
+        {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "Ensembl",
+                "id": "ENSP00000646354.1"
+              }
+            ],
+            "value": "Cytochrome P450 family 3 subfamily A member 5"
+          }
+        }
+      ]
+    },
+    "genes": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Ensembl",
+              "id": "ENSP00000646354.1"
+            }
+          ],
+          "value": "CYP3A5"
+        }
+      }
+    ],
+    "keywords": [
+      {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000005640"
+          }
+        ],
+        "id": "KW-1185",
+        "category": "Technical term",
+        "name": "Reference proteome"
+      }
+    ],
+    "references": [
+      {
+        "referenceNumber": 1,
+        "citation": {
+          "id": "11237011",
+          "citationType": "journal article",
+          "authoringGroup": [
+            "International Human Genome Sequencing Consortium"
+          ],
+          "authors": [
+            "Lander E.S.",
+            "Linton L.M.",
+            "Birren B.",
+            "Nusbaum C.",
+            "Zody M.C.",
+            "Baldwin J.",
+            "Devon K.",
+            "Dewar K.",
+            "Doyle M.",
+            "FitzHugh W.",
+            "Funke R.",
+            "Gage D.",
+            "Harris K.",
+            "Heaford A.",
+            "Howland J.",
+            "Kann L.",
+            "Lehoczky J.",
+            "LeVine R.",
+            "McEwan P.",
+            "McKernan K.",
+            "Meldrim J.",
+            "Mesirov J.P.",
+            "Miranda C.",
+            "Morris W.",
+            "Naylor J.",
+            "Raymond C.",
+            "Rosetti M.",
+            "Santos R.",
+            "Sheridan A.",
+            "Sougnez C.",
+            "Stange-Thomann N.",
+            "Stojanovic N.",
+            "Subramanian A.",
+            "Wyman D.",
+            "Rogers J.",
+            "Sulston J.",
+            "Ainscough R.",
+            "Beck S.",
+            "Bentley D.",
+            "Burton J.",
+            "Clee C.",
+            "Carter N.",
+            "Coulson A.",
+            "Deadman R.",
+            "Deloukas P.",
+            "Dunham A.",
+            "Dunham I.",
+            "Durbin R.",
+            "French L.",
+            "Grafham D.",
+            "Gregory S.",
+            "Hubbard T.",
+            "Humphray S.",
+            "Hunt A.",
+            "Jones M.",
+            "Lloyd C.",
+            "McMurray A.",
+            "Matthews L.",
+            "Mercer S.",
+            "Milne S.",
+            "Mullikin J.C.",
+            "Mungall A.",
+            "Plumb R.",
+            "Ross M.",
+            "Shownkeen R.",
+            "Sims S.",
+            "Waterston R.H.",
+            "Wilson R.K.",
+            "Hillier L.W.",
+            "McPherson J.D.",
+            "Marra M.A.",
+            "Mardis E.R.",
+            "Fulton L.A.",
+            "Chinwalla A.T.",
+            "Pepin K.H.",
+            "Gish W.R.",
+            "Chissoe S.L.",
+            "Wendl M.C.",
+            "Delehaunty K.D.",
+            "Miner T.L.",
+            "Delehaunty A.",
+            "Kramer J.B.",
+            "Cook L.L.",
+            "Fulton R.S.",
+            "Johnson D.L.",
+            "Minx P.J.",
+            "Clifton S.W.",
+            "Hawkins T.",
+            "Branscomb E.",
+            "Predki P.",
+            "Richardson P.",
+            "Wenning S.",
+            "Slezak T.",
+            "Doggett N.",
+            "Cheng J.F.",
+            "Olsen A.",
+            "Lucas S.",
+            "Elkin C.",
+            "Uberbacher E.",
+            "Frazier M.",
+            "Gibbs R.A.",
+            "Muzny D.M.",
+            "Scherer S.E.",
+            "Bouck J.B.",
+            "Sodergren E.J.",
+            "Worley K.C.",
+            "Rives C.M.",
+            "Gorrell J.H.",
+            "Metzker M.L.",
+            "Naylor S.L.",
+            "Kucherlapati R.S.",
+            "Nelson D.L.",
+            "Weinstock G.M.",
+            "Sakaki Y.",
+            "Fujiyama A.",
+            "Hattori M.",
+            "Yada T.",
+            "Toyoda A.",
+            "Itoh T.",
+            "Kawagoe C.",
+            "Watanabe H.",
+            "Totoki Y.",
+            "Taylor T.",
+            "Weissenbach J.",
+            "Heilig R.",
+            "Saurin W.",
+            "Artiguenave F.",
+            "Brottier P.",
+            "Bruls T.",
+            "Pelletier E.",
+            "Robert C.",
+            "Wincker P.",
+            "Smith D.R.",
+            "Doucette-Stamm L.",
+            "Rubenfield M.",
+            "Weinstock K.",
+            "Lee H.M.",
+            "Dubois J.",
+            "Rosenthal A.",
+            "Platzer M.",
+            "Nyakatura G.",
+            "Taudien S.",
+            "Rump A.",
+            "Yang H.",
+            "Yu J.",
+            "Wang J.",
+            "Huang G.",
+            "Gu J.",
+            "Hood L.",
+            "Rowen L.",
+            "Madan A.",
+            "Qin S.",
+            "Davis R.W.",
+            "Federspiel N.A.",
+            "Abola A.P.",
+            "Proctor M.J.",
+            "Myers R.M.",
+            "Schmutz J.",
+            "Dickson M.",
+            "Grimwood J.",
+            "Cox D.R.",
+            "Olson M.V.",
+            "Kaul R.",
+            "Raymond C.",
+            "Shimizu N.",
+            "Kawasaki K.",
+            "Minoshima S.",
+            "Evans G.A.",
+            "Athanasiou M.",
+            "Schultz R.",
+            "Roe B.A.",
+            "Chen F.",
+            "Pan H.",
+            "Ramser J.",
+            "Lehrach H.",
+            "Reinhardt R.",
+            "McCombie W.R.",
+            "de la Bastide M.",
+            "Dedhia N.",
+            "Blocker H.",
+            "Hornischer K.",
+            "Nordsiek G.",
+            "Agarwala R.",
+            "Aravind L.",
+            "Bailey J.A.",
+            "Bateman A.",
+            "Batzoglou S.",
+            "Birney E.",
+            "Bork P.",
+            "Brown D.G.",
+            "Burge C.B.",
+            "Cerutti L.",
+            "Chen H.C.",
+            "Church D.",
+            "Clamp M.",
+            "Copley R.R.",
+            "Doerks T.",
+            "Eddy S.R.",
+            "Eichler E.E.",
+            "Furey T.S.",
+            "Galagan J.",
+            "Gilbert J.G.",
+            "Harmon C.",
+            "Hayashizaki Y.",
+            "Haussler D.",
+            "Hermjakob H.",
+            "Hokamp K.",
+            "Jang W.",
+            "Johnson L.S.",
+            "Jones T.A.",
+            "Kasif S.",
+            "Kaspryzk A.",
+            "Kennedy S.",
+            "Kent W.J.",
+            "Kitts P.",
+            "Koonin E.V.",
+            "Korf I.",
+            "Kulp D.",
+            "Lancet D.",
+            "Lowe T.M.",
+            "McLysaght A.",
+            "Mikkelsen T.",
+            "Moran J.V.",
+            "Mulder N.",
+            "Pollara V.J.",
+            "Ponting C.P.",
+            "Schuler G.",
+            "Schultz J.",
+            "Slater G.",
+            "Smit A.F.",
+            "Stupka E.",
+            "Szustakowski J.",
+            "Thierry-Mieg D.",
+            "Thierry-Mieg J.",
+            "Wagner L.",
+            "Wallis J.",
+            "Wheeler R.",
+            "Williams A.",
+            "Wolf Y.I.",
+            "Wolfe K.H.",
+            "Yang S.P.",
+            "Yeh R.F.",
+            "Collins F.",
+            "Guyer M.S.",
+            "Peterson J.",
+            "Felsenfeld A.",
+            "Wetterstrand K.A.",
+            "Patrinos A.",
+            "Morgan M.J.",
+            "de Jong P.",
+            "Catanese J.J.",
+            "Osoegawa K.",
+            "Shizuya H.",
+            "Choi S.",
+            "Chen Y.J."
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "11237011"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35057062"
+            }
+          ],
+          "title": "Initial sequencing and analysis of the human genome.",
+          "publicationDate": "2001",
+          "journal": "Nature",
+          "firstPage": "860",
+          "lastPage": "921",
+          "volume": "409"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSP00000646354.1"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000005640"
+          }
+        ]
+      },
+      {
+        "referenceNumber": 2,
+        "citation": {
+          "id": "12853948",
+          "citationType": "journal article",
+          "authors": [
+            "Hillier L.W.",
+            "Fulton R.S.",
+            "Fulton L.A.",
+            "Graves T.A.",
+            "Pepin K.H.",
+            "Wagner-McPherson C.",
+            "Layman D.",
+            "Maas J.",
+            "Jaeger S.",
+            "Walker R.",
+            "Wylie K.",
+            "Sekhon M.",
+            "Becker M.C.",
+            "O'Laughlin M.D.",
+            "Schaller M.E.",
+            "Fewell G.A.",
+            "Delehaunty K.D.",
+            "Miner T.L.",
+            "Nash W.E.",
+            "Cordes M.",
+            "Du H.",
+            "Sun H.",
+            "Edwards J.",
+            "Bradshaw-Cordum H.",
+            "Ali J.",
+            "Andrews S.",
+            "Isak A.",
+            "Vanbrunt A.",
+            "Nguyen C.",
+            "Du F.",
+            "Lamar B.",
+            "Courtney L.",
+            "Kalicki J.",
+            "Ozersky P.",
+            "Bielicki L.",
+            "Scott K.",
+            "Holmes A.",
+            "Harkins R.",
+            "Harris A.",
+            "Strong C.M.",
+            "Hou S.",
+            "Tomlinson C.",
+            "Dauphin-Kohlberg S.",
+            "Kozlowicz-Reilly A.",
+            "Leonard S.",
+            "Rohlfing T.",
+            "Rock S.M.",
+            "Tin-Wollam A.M.",
+            "Abbott A.",
+            "Minx P.",
+            "Maupin R.",
+            "Strowmatt C.",
+            "Latreille P.",
+            "Miller N.",
+            "Johnson D.",
+            "Murray J.",
+            "Woessner J.P.",
+            "Wendl M.C.",
+            "Yang S.P.",
+            "Schultz B.R.",
+            "Wallis J.W.",
+            "Spieth J.",
+            "Bieri T.A.",
+            "Nelson J.O.",
+            "Berkowicz N.",
+            "Wohldmann P.E.",
+            "Cook L.L.",
+            "Hickenbotham M.T.",
+            "Eldred J.",
+            "Williams D.",
+            "Bedell J.A.",
+            "Mardis E.R.",
+            "Clifton S.W.",
+            "Chissoe S.L.",
+            "Marra M.A.",
+            "Raymond C.",
+            "Haugen E.",
+            "Gillett W.",
+            "Zhou Y.",
+            "James R.",
+            "Phelps K.",
+            "Iadanoto S.",
+            "Bubb K.",
+            "Simms E.",
+            "Levy R.",
+            "Clendenning J.",
+            "Kaul R.",
+            "Kent W.J.",
+            "Furey T.S.",
+            "Baertsch R.A.",
+            "Brent M.R.",
+            "Keibler E.",
+            "Flicek P.",
+            "Bork P.",
+            "Suyama M.",
+            "Bailey J.A.",
+            "Portnoy M.E.",
+            "Torrents D.",
+            "Chinwalla A.T.",
+            "Gish W.R.",
+            "Eddy S.R.",
+            "McPherson J.D.",
+            "Olson M.V.",
+            "Eichler E.E.",
+            "Green E.D.",
+            "Waterston R.H.",
+            "Wilson R.K."
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "12853948"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature01782"
+            }
+          ],
+          "title": "The DNA sequence of human chromosome 7.",
+          "publicationDate": "2003",
+          "journal": "Nature",
+          "firstPage": "157",
+          "lastPage": "164",
+          "volume": "424"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSP00000646354.1"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000005640"
+          }
+        ]
+      },
+      {
+        "referenceNumber": 3,
+        "citation": {
+          "id": "15496913",
+          "citationType": "journal article",
+          "authoringGroup": [
+            "International Human Genome Sequencing Consortium"
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "15496913"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature03001"
+            }
+          ],
+          "title": "Finishing the euchromatic sequence of the human genome.",
+          "publicationDate": "2004",
+          "journal": "Nature",
+          "firstPage": "931",
+          "lastPage": "945",
+          "volume": "431"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSP00000646354.1"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000005640"
+          }
+        ]
+      },
+      {
+        "referenceNumber": 4,
+        "citation": {
+          "id": "CI-20IM2DDAQPFF7",
+          "citationType": "submission",
+          "authoringGroup": [
+            "Ensembl"
+          ],
+          "publicationDate": "JUL-2026",
+          "submissionDatabase": "UniProtKB"
+        },
+        "referencePositions": [
+          "IDENTIFICATION"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSP00000646354.1"
+          }
+        ]
+      }
+    ],
+    "uniProtKBCrossReferences": [
+      {
+        "database": "EMBL",
+        "id": "AC005020",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "-"
+          },
+          {
+            "key": "Status",
+            "value": "NOT_ANNOTATED_CDS"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      {
+        "database": "EMBL",
+        "id": "KF459642",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "-"
+          },
+          {
+            "key": "Status",
+            "value": "NOT_ANNOTATED_CDS"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      {
+        "database": "Ensembl",
+        "id": "ENST00000976537.1",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "ENSP00000646354.1"
+          },
+          {
+            "key": "GeneId",
+            "value": "ENSG00000106258.18"
+          }
+        ]
+      },
+      {
+        "database": "HGNC",
+        "id": "HGNC:2638",
+        "properties": [
+          {
+            "key": "GeneName",
+            "value": "CYP3A5"
+          }
+        ]
+      },
+      {
+        "database": "OpenTargets",
+        "id": "ENSG00000106258",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "GeneTree",
+        "id": "ENSGT00950000182958",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "Proteomes",
+        "id": "UP000005640",
+        "properties": [
+          {
+            "key": "Component",
+            "value": "Chromosome 7"
+          }
+        ]
+      }
+    ],
+    "sequence": {
+      "value": "MDLIPNLAVETWLLLAVSLVLLYLMRVPKSAKSPLTKQT",
+      "length": 39,
+      "molWeight": 4367,
+      "crc64": "EE9306EBA1C3A3A9",
+      "md5": "C616E56CA6A55E234C47F9618493BAC9"
+    },
+    "extraAttributes": {
+      "uniParcId": "UPI00001A9DF5"
+    }
+  },
+  "Q8MH00": {
+    "entryType": "UniProtKB unreviewed (TrEMBL)",
+    "primaryAccession": "Q8MH00",
+    "uniProtkbId": "Q8MH00_HUMAN",
+    "entryAudit": {
+      "firstPublicDate": "2002-10-01",
+      "lastAnnotationUpdateDate": "2019-12-11",
+      "lastSequenceUpdateDate": "2002-10-01",
+      "entryVersion": 38,
+      "sequenceVersion": 1
+    },
+    "annotationScore": 1.0,
+    "organism": {
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "taxonId": 9606,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAM94854.1"
+        }
+      ],
+      "lineage": [
+        "Eukaryota",
+        "Metazoa",
+        "Chordata",
+        "Craniata",
+        "Vertebrata",
+        "Euteleostomi",
+        "Mammalia",
+        "Eutheria",
+        "Euarchontoglires",
+        "Primates",
+        "Haplorrhini",
+        "Catarrhini",
+        "Hominidae",
+        "Homo"
+      ]
+    },
+    "proteinExistence": "2: Evidence at transcript level",
+    "proteinDescription": {
+      "submissionNames": [
+        {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "EMBL",
+                "id": "AAM94854.1"
+              }
+            ],
+            "value": "MHC class II antigen"
+          }
+        }
+      ],
+      "flag": "Fragment"
+    },
+    "genes": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAM94854.1"
+            }
+          ],
+          "value": "HLA-DQA1"
+        }
+      }
+    ],
+    "features": [
+      {
+        "type": "Non-terminal residue",
+        "location": {
+          "start": {
+            "value": 1,
+            "modifier": "EXACT"
+          },
+          "end": {
+            "value": 1,
+            "modifier": "EXACT"
+          }
+        },
+        "description": "",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAM94854.1"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "referenceNumber": 1,
+        "citation": {
+          "id": "CI-5GAQDRCAANABU",
+          "citationType": "submission",
+          "authors": [
+            "Hoarau J.-J.",
+            "Cesari M.",
+            "Caillens H.",
+            "Cadet F.",
+            "Pabion M."
+          ],
+          "title": "HLA DQA1 gene generates multiple transcripts by alternative splicing and polyadenylation of the 3' untranslated region.",
+          "publicationDate": "JUL-2002",
+          "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAM94854.1"
+          }
+        ]
+      },
+      {
+        "referenceNumber": 2,
+        "citation": {
+          "id": "15900489",
+          "citationType": "journal article",
+          "authors": [
+            "Hoarau J.J.",
+            "Festy F.",
+            "Cesari M.",
+            "Pabion M."
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "15900489"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1007/s00251-005-0769-3"
+            }
+          ],
+          "title": "A new splicing acceptor site and poly(A)+ sequence signal within DQA1*0401 and DQA1*0501 mRNA 3'UTR contribute to increase the extraordinary diversity of mRNA isoforms.",
+          "publicationDate": "2005",
+          "journal": "Immunogenetics",
+          "firstPage": "182",
+          "lastPage": "188",
+          "volume": "57"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAM94854.1"
+          }
+        ]
+      }
+    ],
+    "uniProtKBCrossReferences": [
+      {
+        "database": "EMBL",
+        "id": "AF533940",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AAM94854.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "mRNA"
+          }
+        ]
+      },
+      {
+        "database": "PeptideAtlas",
+        "id": "Q8MH00",
+        "properties": [
+          {
+            "key": "Description",
+            "value": "-"
+          }
+        ]
+      },
+      {
+        "database": "ChiTaRS",
+        "id": "HLA-DQA1",
+        "properties": [
+          {
+            "key": "OrganismName",
+            "value": "human"
+          }
+        ]
+      }
+    ],
+    "sequence": {
+      "value": "GLRSVGASRHQGPL",
+      "length": 14,
+      "molWeight": 1435,
+      "crc64": "C5EEA0FE15DF8EBD",
+      "md5": "DD5896560806B3664E43218BE885E71D"
+    },
+    "extraAttributes": {
+      "countByFeatureType": {
+        "Non-terminal residue": 1
+      },
+      "uniParcId": "UPI0000089273"
+    }
+  },
+  "Q8MH01": {
+    "entryType": "UniProtKB unreviewed (TrEMBL)",
+    "primaryAccession": "Q8MH01",
+    "uniProtkbId": "Q8MH01_HUMAN",
+    "entryAudit": {
+      "firstPublicDate": "2002-10-01",
+      "lastAnnotationUpdateDate": "2019-12-11",
+      "lastSequenceUpdateDate": "2002-10-01",
+      "entryVersion": 38,
+      "sequenceVersion": 1
+    },
+    "annotationScore": 1.0,
+    "organism": {
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "taxonId": 9606,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAM94853.1"
+        }
+      ],
+      "lineage": [
+        "Eukaryota",
+        "Metazoa",
+        "Chordata",
+        "Craniata",
+        "Vertebrata",
+        "Euteleostomi",
+        "Mammalia",
+        "Eutheria",
+        "Euarchontoglires",
+        "Primates",
+        "Haplorrhini",
+        "Catarrhini",
+        "Hominidae",
+        "Homo"
+      ]
+    },
+    "proteinExistence": "2: Evidence at transcript level",
+    "proteinDescription": {
+      "submissionNames": [
+        {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "EMBL",
+                "id": "AAM94853.1"
+              }
+            ],
+            "value": "MHC class II antigen"
+          }
+        }
+      ],
+      "flag": "Fragment"
+    },
+    "genes": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAM94853.1"
+            }
+          ],
+          "value": "HLA-DQA1"
+        }
+      }
+    ],
+    "features": [
+      {
+        "type": "Non-terminal residue",
+        "location": {
+          "start": {
+            "value": 1,
+            "modifier": "EXACT"
+          },
+          "end": {
+            "value": 1,
+            "modifier": "EXACT"
+          }
+        },
+        "description": "",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAM94853.1"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "referenceNumber": 1,
+        "citation": {
+          "id": "CI-5GAQDRCAANABU",
+          "citationType": "submission",
+          "authors": [
+            "Hoarau J.-J.",
+            "Cesari M.",
+            "Caillens H.",
+            "Cadet F.",
+            "Pabion M."
+          ],
+          "title": "HLA DQA1 gene generates multiple transcripts by alternative splicing and polyadenylation of the 3' untranslated region.",
+          "publicationDate": "JUL-2002",
+          "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAM94853.1"
+          }
+        ]
+      },
+      {
+        "referenceNumber": 2,
+        "citation": {
+          "id": "15900489",
+          "citationType": "journal article",
+          "authors": [
+            "Hoarau J.J.",
+            "Festy F.",
+            "Cesari M.",
+            "Pabion M."
+          ],
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "15900489"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1007/s00251-005-0769-3"
+            }
+          ],
+          "title": "A new splicing acceptor site and poly(A)+ sequence signal within DQA1*0401 and DQA1*0501 mRNA 3'UTR contribute to increase the extraordinary diversity of mRNA isoforms.",
+          "publicationDate": "2005",
+          "journal": "Immunogenetics",
+          "firstPage": "182",
+          "lastPage": "188",
+          "volume": "57"
+        },
+        "referencePositions": [
+          "NUCLEOTIDE SEQUENCE"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAM94853.1"
+          }
+        ]
+      }
+    ],
+    "uniProtKBCrossReferences": [
+      {
+        "database": "EMBL",
+        "id": "AF533939",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AAM94853.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "mRNA"
+          }
+        ]
+      },
+      {
+        "database": "ChiTaRS",
+        "id": "HLA-DQA1",
+        "properties": [
+          {
+            "key": "OrganismName",
+            "value": "human"
+          }
+        ]
+      }
+    ],
+    "sequence": {
+      "value": "GLRSVGASRHQGPL",
+      "length": 14,
+      "molWeight": 1435,
+      "crc64": "C5EEA0FE15DF8EBD",
+      "md5": "DD5896560806B3664E43218BE885E71D"
+    },
+    "extraAttributes": {
+      "countByFeatureType": {
+        "Non-terminal residue": 1
+      },
+      "uniParcId": "UPI0000089273"
+    }
+  }
+}

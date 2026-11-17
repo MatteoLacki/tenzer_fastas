@@ -4,3 +4,5 @@ fastas
 Protein-Contaminant-Libraries-for-DDA-and-DIA-Proteomics
 contaminants/*.fasta
 !contaminants/tenzer.fasta
+__pycache__/
+*.pyc
