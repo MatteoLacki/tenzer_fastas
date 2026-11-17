@@ -74,7 +74,7 @@ not every member of this cohort.
 All six fetched example UniProt sequences were compared with their local FASTA
 records and match exactly. Live metadata is saved in
 `human_duplicate_provenance_20261117.json`. Every duplicate group member is
-listed in `duplicate_sequences_human_all_20261113.tsv`.
+listed in the local, unversioned `duplicate_sequences_human_all_20261113.tsv` report.
 
 ## Interpretation
 

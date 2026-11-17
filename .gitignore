@@ -6,3 +6,4 @@ contaminants/*.fasta
 !contaminants/tenzer.fasta
 __pycache__/
 *.pyc
+*.tsv

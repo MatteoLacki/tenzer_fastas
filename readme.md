@@ -54,3 +54,5 @@ explicitly selects the default preservation behavior.
 
 Filename entry counts describe the underlying download; the final merged record
 count is printed on stderr.
+
+TSV audit reports are local artifacts and are excluded from version control.
